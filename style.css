@@ -1,0 +1,224 @@
+/* ----------------- FONT ----------------- */
+body, h1, h2, p, li, div {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ----------------- 1. Stile globale ----------------- */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------------- 2. Header ----------------- */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+}
+
+header h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+}
+
+/* Header squadre grande */
+.header-squadre.grande {
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* maggiore spazio tra le squadre */
+  padding: 20px 0;
+}
+
+.squadra-header {
+  text-align: center;
+  width: 200px; /* riquadro più largo */
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.squadra-header.blu {
+  background-color: #0077cc;
+  color: white;
+}
+
+.squadra-header.rosso {
+  background-color: #cc0000;
+  color: white;
+}
+
+.squadra-header img {
+  width: 120px; /* immagine più grande */
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.squadra-header .risultato {
+  font-size: 1.5em; /* risultato più evidente */
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* ----------------- 3. Layout colonne / container principale ----------------- */
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.colonna {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ----------------- 4. Formazioni ----------------- */
+.squadra {
+  margin-bottom: 15px;
+}
+
+.giocatore {
+  padding: 5px;
+  margin: 3px 0;
+  background-color: #e3e3e3;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.giocatore:hover {
+  background-color: #d1d1d1;
+  transform: scale(1.03);
+}
+
+#formazioni img {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* ----------------- 5. Footer ----------------- */
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* ----------------- 6. Calendario partite a tendina ----------------- */
+.partita {
+  background-color: #eaeaea;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.partita:hover {
+  background-color: #dcdcdc;
+}
+
+.partita-titolo {
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gol-dettaglio {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gol-colonna {
+  width: 45%;
+}
+
+.gol-colonna h4 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 0.9em;
+  text-decoration: underline;
+}
+
+.gol-giocatore {
+  margin: 2px 0;
+}
+
+/* ----------------- 7. Classifica Marcatori migliorata ----------------- */
+#marcatori {
+  background: linear-gradient(135deg, #ffefba, #ffffff);
+  border: 2px solid #ffd700;
+}
+
+#lista-marcatori li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 6px;
+  background-color: #fff8dc;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+  position: relative;
+}
+
+#lista-marcatori li:hover {
+  background-color: #ffe680;
+  transform: scale(1.03);
+}
+
+#lista-marcatori li.top1 { background-color: #ffd700; color: #000; }
+#lista-marcatori li.top2 { background-color: #c0c0c0; color: #000; }
+#lista-marcatori li.top3 { background-color: #cd7f32; color: #fff; }
+
+.gol-icon {
+  display: inline-block;
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+  background-image: url('pallone.png'); /* Icona pallone */
+  background-size: cover;
+}
+
+
+
+
+
+
