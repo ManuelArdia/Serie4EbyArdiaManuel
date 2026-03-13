@@ -1,224 +1,161 @@
-/* ----------------- FONT ----------------- */
-body, h1, h2, p, li, div {
-  font-family: 'Roboto', sans-serif;
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Libre+Baskerville&display=swap');
+
+/* RESET BASE */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ----------------- 1. Stile globale ----------------- */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+/* BODY */
+
+body{
+    background:#f5f1e8;
+    color:#2c2c2c;
+    font-family:'Libre Baskerville', serif;
+    line-height:1.7;
 }
 
-h1, h2 {
-  margin: 0;
-  padding: 0;
+/* HEADER */
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
-/* ----------------- 2. Header ----------------- */
-header {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #f4f4f4;
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:60px;
+    margin-bottom:10px;
 }
 
-header h1 {
-  font-size: 2.8em;
-  margin-bottom: 15px;
+header p{
+    font-size:20px;
+    margin-bottom:40px;
+    max-width:600px;
 }
 
-/* Header squadre grande */
-.header-squadre.grande {
-  display: flex;
-  justify-content: center;
-  gap: 80px; /* maggiore spazio tra le squadre */
-  padding: 20px 0;
+/* NAV BUTTONS */
+
+.nav-buttons{
+    display:flex;
+    gap:20px;
 }
 
-.squadra-header {
-  text-align: center;
-  width: 200px; /* riquadro più largo */
-  padding: 15px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+.nav-buttons a{
+    text-decoration:none;
+    color:white;
+    background:#3a2f2f;
+    padding:12px 22px;
+    border-radius:6px;
+    transition:0.3s;
+    font-size:16px;
 }
 
-.squadra-header.blu {
-  background-color: #0077cc;
-  color: white;
+.nav-buttons a:hover{
+    background:#5a4a4a;
 }
 
-.squadra-header.rosso {
-  background-color: #cc0000;
-  color: white;
+/* INTRO SECTION */
+
+.intro{
+    padding:80px 20px;
+    text-align:center;
+    max-width:800px;
+    margin:auto;
 }
 
-.squadra-header img {
-  width: 120px; /* immagine più grande */
-  height: auto;
-  margin-bottom: 10px;
-  border-radius: 8px;
+.intro h2{
+    font-family:'Playfair Display', serif;
+    font-size:36px;
+    margin-bottom:20px;
 }
 
-.squadra-header .risultato {
-  font-size: 1.5em; /* risultato più evidente */
-  font-weight: bold;
-  margin-top: 8px;
+/* POET SECTIONS */
+
+.poet-section{
+    padding:100px 20px;
+    text-align:center;
 }
 
-/* ----------------- 3. Layout colonne / container principale ----------------- */
-.container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 20px;
+.poet-section:nth-child(even){
+    background:#f0ebe1;
 }
 
-.colonna {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 30%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  margin-bottom: 20px;
+.poet-name{
+    font-family:'Playfair Display', serif;
+    font-size:42px;
+    margin-bottom:10px;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 15px;
+.poet-description{
+    font-style:italic;
+    margin-bottom:40px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+/* POET IMAGE */
+
+.poet-image{
+    width:200px;
+    border-radius:10px;
+    margin-bottom:30px;
 }
 
-li {
-  padding: 5px 0;
-  border-bottom: 1px solid #ddd;
+/* POEM TITLE */
+
+.poem-title{
+    font-family:'Playfair Display', serif;
+    font-size:28px;
+    margin-bottom:20px;
 }
 
-/* ----------------- 4. Formazioni ----------------- */
-.squadra {
-  margin-bottom: 15px;
+/* POEM TEXT */
+
+.poem{
+    white-space:pre-line;
+    font-size:18px;
+    max-width:600px;
+    margin:auto;
+    margin-bottom:30px;
 }
 
-.giocatore {
-  padding: 5px;
-  margin: 3px 0;
-  background-color: #e3e3e3;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.2s, background-color 0.2s;
+/* GROUP */
+
+.group{
+    font-style:italic;
+    opacity:0.7;
 }
 
-.giocatore:hover {
-  background-color: #d1d1d1;
-  transform: scale(1.03);
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:#3a2f2f;
+    color:white;
+    margin-top:60px;
 }
 
-#formazioni img {
-  width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px auto;
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header h1{
+    font-size:40px;
 }
 
-/* ----------------- 5. Footer ----------------- */
-footer {
-  background-color: #222;
-  color: #ccc;
-  text-align: center;
-  padding: 15px 0;
+.poet-name{
+    font-size:32px;
 }
 
-/* ----------------- 6. Calendario partite a tendina ----------------- */
-.partita {
-  background-color: #eaeaea;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: background-color 0.2s;
+.poem{
+    font-size:16px;
 }
 
-.partita:hover {
-  background-color: #dcdcdc;
 }
-
-.partita-titolo {
-  padding: 10px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.gol-dettaglio {
-  display: none;
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-top: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-}
-
-.gol-colonna {
-  width: 45%;
-}
-
-.gol-colonna h4 {
-  margin-top: 0;
-  text-align: center;
-  font-size: 0.9em;
-  text-decoration: underline;
-}
-
-.gol-giocatore {
-  margin: 2px 0;
-}
-
-/* ----------------- 7. Classifica Marcatori migliorata ----------------- */
-#marcatori {
-  background: linear-gradient(135deg, #ffefba, #ffffff);
-  border: 2px solid #ffd700;
-}
-
-#lista-marcatori li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 12px;
-  margin: 5px 0;
-  border-radius: 6px;
-  background-color: #fff8dc;
-  font-weight: bold;
-  transition: transform 0.2s, background-color 0.2s;
-  position: relative;
-}
-
-#lista-marcatori li:hover {
-  background-color: #ffe680;
-  transform: scale(1.03);
-}
-
-#lista-marcatori li.top1 { background-color: #ffd700; color: #000; }
-#lista-marcatori li.top2 { background-color: #c0c0c0; color: #000; }
-#lista-marcatori li.top3 { background-color: #cd7f32; color: #fff; }
-
-.gol-icon {
-  display: inline-block;
-  margin-left: 8px;
-  width: 18px;
-  height: 18px;
-  background-image: url('pallone.png'); /* Icona pallone */
-  background-size: cover;
-}
-
-
-
-
-
-
