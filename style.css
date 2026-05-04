@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #050816;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND CANVAS */
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* GLASS UI */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: 60px;
+  color: #00aaff;
+  text-shadow: 0 0 20px #00aaff;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00aaff;
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+section {
+  padding: 90px 20px;
+  text-align: center;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.15) rotate(2deg);
+  background: rgba(0,170,255,0.2);
+  box-shadow: 0 0 20px #00aaff;
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 150px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.5;
+}
